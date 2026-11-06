@@ -28,6 +28,8 @@ entities:
             value: program
           - dps_val: induce
             value: induce
+          - dps_val: wire
+            value: wire
       - id: 16
         name: temperature
         type: integer
@@ -63,3 +65,64 @@ entities:
       - id: 40
         type: boolean
         name: lock
+  - entity: select
+    name: Induce time
+    icon: "mdi:timer-outline"
+    category: config
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: "15"
+            value: "15 min"
+          - dps_val: "30"
+            value: "30 min"
+          - dps_val: "45"
+            value: "45 min"
+          - dps_val: "60"
+            value: "60 min"
+  - entity: select
+    name: Anti-scald limit
+    icon: "mdi:thermometer-alert"
+    category: config
+    dps:
+      - id: 102
+        type: string
+        name: option
+        mapping:
+          - dps_val: "0"
+            value: "Off"
+          - dps_val: "30"
+            value: "30°C"
+          - dps_val: "35"
+            value: "35°C"
+          - dps_val: "40"
+            value: "40°C"
+          - dps_val: "45"
+            value: "45°C"
+          - dps_val: "50"
+            value: "50°C"
+  - entity: select
+    name: Open window detection
+    icon: "mdi:window-open-variant"
+    category: config
+    dps:
+      - id: 103
+        type: string
+        name: option
+        mapping:
+          - dps_val: "0"
+            value: "Off"
+          - dps_val: "60"
+            value: "60 min"
+          - dps_val: "90"
+            value: "90 min"
+  - entity: switch
+    name: Wired control
+    icon: "mdi:cable-data"
+    category: config
+    dps:
+      - id: 104
+        type: boolean
+        name: switch
